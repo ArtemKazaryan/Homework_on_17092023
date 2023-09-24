@@ -1,0 +1,15 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+Создать продукт
+{% endblock %}
+{% block content %}
+    <form action="" method="post" class="register">
+    <h1>Создание продукта</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+        <div class="center">
+            <button class="btn">Создать</button>
+        </div>
+    </form>
+{% endblock %}

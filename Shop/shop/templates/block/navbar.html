@@ -1,0 +1,33 @@
+{% load static %}
+<div class="menu">
+    {% if  user.is_authenticated %}
+
+        <div>
+            <a href="/" class="logo">Top shop</a>
+            <a href="{% url 'shop:favorite_list' %}" class="logo">Избранное</a>
+            <a href="{% url 'shop:create_product' %}" class="logo">Добавить</a>
+        </div>
+        <div>
+            <a href="{% url 'user:user_profile' user.id %}" class="logo">HI: {{ user.username }}</a>
+            <a href="{% url 'user:logoutuser' %}" class="logo">Выйти</a>
+        </div>
+    {% else %}
+        <div>
+            <a href="/" class="logo">Top shop</a>
+        </div>
+        <div>
+            <a href="{% url 'user:login' %}" class="logo">Войти</a>
+            <a href="{% url 'user:signup' %}" class="logo">Зарегистрироваться</a>
+        </div>
+    {% endif %}
+
+{#</div>#}
+{#<div id="subheader">#}
+{#    <div class="cart">#}
+{#        <a href="{% url 'basket:basket_detail' %}">#}
+{#            <img src="{% static 'img/basket.png' %}" alt="basket">#}
+{#            {{ basket_items }}#}
+{##}
+{#        </a>#}
+{#    </div>#}
+{#</div>#}

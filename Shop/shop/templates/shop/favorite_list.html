@@ -1,0 +1,16 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}My Favorites{% endblock %}
+
+{% block content %}
+    <h2>Мое избранное</h2>
+    {% if favorites %}
+        <ul>
+            {% for favorite in favorites %}
+                <li><a href="{{ favorite.product.get_absolute_url }}">{{ favorite.product.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Список избранного пуст</p>
+    {% endif %}
+{% endblock %}

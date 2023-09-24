@@ -1,0 +1,53 @@
+.item {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.item a:hover {
+    color: #f00;
+}
+
+.item div {
+    margin-top: 10px;
+}
+
+.item form {
+    display: inline-block;
+}
+
+.item input[type="submit"] {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.item input[type="submit"]:hover {
+    background-color: #c00;
+}
+
+.item a.favorite {
+    display: inline-block;
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.item a.favorite:hover {
+    background-color: #c00;
+}
